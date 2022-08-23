@@ -50,14 +50,3 @@ div {
 }
 
 
-.App-header {
-  background-color: #061023;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(243, 16, 16);
-}
-
