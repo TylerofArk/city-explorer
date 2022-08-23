@@ -19,7 +19,9 @@ This is a React application that uses the Axios library to make user-initiated r
 08-22-2022 5:30pm - React application generated and connected to repo on Github.  -->
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Dan Awesome: https://github.com/Dawesome101/city-explorer
+Stephen Clemmer: 
+Luis Rosales:
 
 ## Daily Work Log
 
