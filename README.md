@@ -5,23 +5,26 @@
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-
 This is a React application that uses the Axios library to make user-initiated requests for data from a third-party API.
+
+
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+![WRRC Model](vscode-remote://wsl%2Bubuntu/home/tylerofark/projects/courses/301/city-explorer/src/City%20Explorer%20-%20WRRC%20%281%29.png)
 
 ## Change Log
 
 08-22-2022 5:30pm - React application generated and connected to repo on Github.  -->
 
 ## Credit and Collaborations
-Dan Awesome: https://github.com/Dawesome101/city-explorer
-Stephen Clemmer: 
-Luis Rosales:
+
+Dan Awesome
+Stephen Clemmer
+Luis Rosales
 
 ## Daily Work Log
 
@@ -33,10 +36,9 @@ Luis Rosales:
 
 ### Start time: 5:22pm
 
-### Finish time: 
+### Finish time: 11:52pm
 
-### Actual time needed to complete: 
-
+### Actual time needed to complete: 6hrs
 
 ### Tuesday, Aug. 23, 2022
 
@@ -46,10 +48,9 @@ Luis Rosales:
 
 ### Start time: 5:22pm
 
-### Finish time: 
+### Finish time
 
-### Actual time needed to complete: 
-
+### Actual time needed to complete
 
 ### Wednesday, Aug. 24, 2022
 
@@ -59,10 +60,9 @@ Luis Rosales:
 
 ### Start time: 5:22pm
 
-### Finish time: 
+### Finish time
 
-### Actual time needed to complete: 
-
+### Actual time needed to complete
 
 ### Thursday, Aug. 25, 2022
 
@@ -72,10 +72,9 @@ Luis Rosales:
 
 ### Start time: 5:22pm
 
-### Finish time: 
+### Finish time
 
-### Actual time needed to complete: 
-
+### Actual time needed to complete
 
 ### Friday, Aug. 26, 2022
 
@@ -85,6 +84,6 @@ Luis Rosales:
 
 ### Start time: 5:22pm
 
-### Finish time: 
+### Finish time
 
-### Actual time needed to complete: 
+### Actual time needed to complete
