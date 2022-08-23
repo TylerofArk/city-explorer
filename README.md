@@ -14,7 +14,7 @@ This is a React application that uses the Axios library to make user-initiated r
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-![WRRC Model](src/WRRC.png)
+![WRRC Model](vscode-remote://wsl%2Bubuntu/home/tylerofark/projects/courses/301/city-explorer/WRRC.png)
 
 ## Change Log
 
