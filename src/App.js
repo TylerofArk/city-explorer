@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Card from 'react-bootstrap/Card';
 
 class App extends React.Component {
 	constructor(props) {
@@ -7,6 +8,8 @@ class App extends React.Component {
 			this.state = {
 				city: '',
 				cityData: [],
+				cityLon: '',
+				cityLat: '',
 				error: false,
 				errorMessages: ''
 			}
@@ -30,7 +33,11 @@ class App extends React.Component {
 
 				let cityData = await axios.get(url);
 
-				console.log(cityData.data[0])
+				console.log(cityData.data[0]);
+				console.log(cityData);
+				this.setState({cityData: cityData.data[0]});
+				this.setState({cityLon: cityData.data[0].lon});
+				this.setState({cityLat: cityData.data[0].lat});
 	}
 
 render() {
@@ -42,6 +49,17 @@ render() {
 			</label>
 			<button type='submit'>Explore!</button>
 		</form>
+
+		<Card style={{ width: '18rem' }}>
+			<Card.Body>
+				<Card.Title>{this.state.city}</Card.Title>
+				<Card.Text>
+					Longitude: {this.state.cityLon}
+					<></>
+					Latitude: {this.state.cityLat}
+				</Card.Text>
+			</Card.Body>
+		</Card>
 		</>
 	);
 	}
