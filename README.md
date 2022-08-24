@@ -7,14 +7,12 @@
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 This is a React application that uses the Axios library to make user-initiated requests for data from a third-party API.
 
-
-
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-![WRRC Model](src/WRRC.png)
+![WRRC Model](vscode-remote://wsl%2Bubuntu/home/tylerofark/projects/courses/301/city-explorer/images/WRRC.png)
 
 ## Change Log
 
@@ -40,17 +38,24 @@ Luis Rosales
 
 ### Actual time needed to complete: 6hrs
 
+-------------------------------------------------
+Dan Awesome
+Stephen Clemmer
+Luis Rosales
+
 ### Tuesday, Aug. 23, 2022
 
-### Name of feature: Geocoding API
+### Name of feature: Weather API
 
-### Estimate of time needed to complete: 3 hrs
+### Estimate of time needed to complete: 6 hrs
 
 ### Start time: 5:22pm
 
-### Finish time
+### Finish time: 11:56pm
 
-### Actual time needed to complete
+### Actual time needed to complete: 6 hrs
+
+-------------------------------------------------
 
 ### Wednesday, Aug. 24, 2022
 
@@ -64,6 +69,8 @@ Luis Rosales
 
 ### Actual time needed to complete
 
+-------------------------------------------------
+
 ### Thursday, Aug. 25, 2022
 
 ### Name of feature: Geocoding API
@@ -75,6 +82,8 @@ Luis Rosales
 ### Finish time
 
 ### Actual time needed to complete
+
+-------------------------------------------------
 
 ### Friday, Aug. 26, 2022
 
