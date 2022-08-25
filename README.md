@@ -61,15 +61,15 @@ Luis Rosales
 
 ### Wednesday, Aug. 24, 2022
 
-### Name of feature: Geocoding API
+### Name of feature: Movie data, Weather data and Map data rendering
 
-### Estimate of time needed to complete: 3 hrs
+### Estimate of time needed to complete: 5 hrs
 
 ### Start time: 5:22pm
 
-### Finish time
+### Finish time: 1:30am
 
-### Actual time needed to complete
+### Actual time needed to complete: 8hrs
 
 -------------------------------------------------
 
