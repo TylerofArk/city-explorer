@@ -1,29 +1,26 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-class Weather extends React.Component {
+class Movies extends React.Component {
 
 
 
 	render() {
-		let weatherArr = this.props.weatherData.map((value, i) => (
+		let movieArr = this.props.movieData.map((value, i) => (
 			<Card style={{width: '18rem'}} key = {i}>
 				<Card.Body>
 					<Card.Text>
-						{value.date}
-					</Card.Text>
-					<Card.Text>
-					{value.description}
+						{value.name}
 					</Card.Text>
 				</Card.Body>
 			</Card>
 		))
 		return(
 			<>
-				{weatherArr}
+				{movieArr}
 			</>
 		)
 	}
 }
 
-export default Weather;
+export default Movies;
