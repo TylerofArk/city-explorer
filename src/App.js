@@ -4,20 +4,24 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './App.css'
-import Weather from './Weather.js';
+import Weather from './Weather';
+import Movie from './Movies'
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
 			this.state = {
-				city: '',
+				city: 'Seattle',
 				cityData: [],
-				cityLon: '',
-				cityLat: '',
+				cityLon: '12',
+				cityLat: '10',
 				displayMap: ``,
 				error: false,
 				errorMessages: '',
-				weatherData: []
+				weatherData: [],
+				movieData: [],
+				showWeather: false,
+				showMovie: false,
 			}
 		}
 	
@@ -39,25 +43,35 @@ class App extends React.Component {
 				let cityData = await axios.get(url);
 
 				let server = process.env.REACT_APP_SERVER_URL;
+
+				let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${cityData.data[0].lat},${cityData.data[0].lon}&zoom=14&size=400x400`
+
+				let weatherURL = `${server}/weather?city=${this.state.city}&lat=${this.state.cityLat}&lon=${this.state.cityLon}`;
+
+				let weatherData = await axios.get(weatherURL)
 				
-				let weatherURL = `${server}/weather`;
+				// , { params: {lat: cityData.data[0].lat, lon: cityData.data[0].lon}});
 
-				let weatherData = await axios.get(weatherURL, { params: {}});
-				console.log(weatherData);
+				let movieUrl = `${server}/movies?city=${this.state.city}`;
 
-				let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.cityLat},${this.state.cityLon}&zoom=14&size=400x400`
+				let movieData = await axios.get(movieUrl)
+				
+				// , { params: {city: this.state.city}});
 
-				console.log(cityData.data[0]);
-				console.log(cityData);
+				// // console.log(cityData.data[0]);
+				// console.log(cityData);
 				
 				this.setState({
+					city: cityData.data[0].display_name,
 					displayName: cityData.data[0].display_name,
 					cityLat: cityData.data[0].lat,
 					cityLon: cityData.data[0].lon,
 					displayMap: cityMap,
-					weatherData: weatherData.data
+					weatherData: weatherData.data,
+					movieData: movieData.data
+
 				})
-	} 
+	}; 
 	
 	catch(error){
 		this.setState({
@@ -66,17 +80,13 @@ class App extends React.Component {
 		})
 	};
 
-handleClose = () => {
-	this.setState({error: false});
-};
-
 render() {
-	let weather = this.state.weatherData.map(day => {
-		return <li>day.description</li>
-	})
+	// let weather = this.state.weatherData.map(day => {
+	// 	return <li>this.state.weatherData</li>
+	// })
 
 	return (
-		<div>
+		<span>
 		<header>
 		<Form onSubmit={this.getCityData}>
 			<Form.Label className='label'> Pick a city!
@@ -88,27 +98,22 @@ render() {
 
 
 		<main>
-			{
-				this.state.weatherData.length > 0 &&
-			<ul>
-				{weather}
-			</ul>
-			}
 		<Card style={{ width: '18rem' }}>
-			<Card.Img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.cityLat},${this.state.cityLon}&zoom=14&size=400x400`} alt = 'Picture of map' />
+			<Card.Img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.cityLat},${this.state.cityLon}&zoom=14&size=400x400`} />
 			<Card.Body>
 				<Card.Title>{this.state.city}</Card.Title>
-				<div className='lonlat'>
+				<span className='lonlat'>
 				<Card.Text className='text'>
-					<div>Longitude: {this.state.cityLon}</div>
-				
-					<div>Latitude: {this.state.cityLat}</div>
+					Longitude: {this.state.cityLon}
+					Latitude: {this.state.cityLat}
 				</Card.Text>
-				</div>
+				</span>
 			</Card.Body>
 		</Card>
+		{this.state.showWeather &&<Weather weatherData={this.state.weatherData} />}
+		{this.state.showMovie &&<Movie movieData={this.state.movieData} />}
 		</main>
-		</div>
+		</span>
 	);
 	}
 }
