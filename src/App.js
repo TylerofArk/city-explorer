@@ -21,7 +21,6 @@ class App extends React.Component {
 			}
 		}
 	
-
 	// CITY DATA HANDLERS
 
 	handleInput = (e) => {
@@ -36,13 +35,15 @@ class App extends React.Component {
 
 		    // build out the URL with the query parameters needed to get data back from LocationIQ
 				let url = `https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`
-
-				let weatherURL = `${process.env.REACT_APP_SERVER}/weather?city=${this.state.city}`;
-
-				let weatherData = await axios.get(weatherURL);
-				console.log(weatherData);
-
+				
 				let cityData = await axios.get(url);
+
+				let server = process.env.REACT_APP_SERVER_URL;
+				
+				let weatherURL = `${server}/weather`;
+
+				let weatherData = await axios.get(weatherURL, { params: {}});
+				console.log(weatherData);
 
 				let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.cityLat},${this.state.cityLon}&zoom=14&size=400x400`
 
@@ -70,6 +71,10 @@ handleClose = () => {
 };
 
 render() {
+	let weather = this.state.weatherData.map(day => {
+		return <li>day.description</li>
+	})
+
 	return (
 		<div>
 		<header>
@@ -83,6 +88,12 @@ render() {
 
 
 		<main>
+			{
+				this.state.weatherData.length > 0 &&
+			<ul>
+				{weather}
+			</ul>
+			}
 		<Card style={{ width: '18rem' }}>
 			<Card.Img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.cityLat},${this.state.cityLon}&zoom=14&size=400x400`} alt = 'Picture of map' />
 			<Card.Body>
@@ -97,11 +108,6 @@ render() {
 			</Card.Body>
 		</Card>
 		</main>
-		<div>
-			{
-		this.state.showWeather ? <Weather data={this.state.weatherData[0].date} showWeather={this.state.showWeather} handleShowWeather={this.handleShowWeather}/> : null
-			};
-		</div>
 		</div>
 	);
 	}
