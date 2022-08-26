@@ -13,6 +13,7 @@ This is a React application that uses the Axios library to make user-initiated r
 ## Architecture
 
 ![WRRC](/imgs.WRRC.jpg)
+![WRRC](vscode-remote://wsl%2Bubuntu/home/tylerofark/projects/courses/301/city-explorer/imgs/WRRC.JPG)
 
 ## Change Log
 
