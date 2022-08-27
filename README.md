@@ -12,7 +12,7 @@ This is a React application that uses the Axios library to make user-initiated r
 
 ## Architecture
 
-![WRRC Response Cycle](https://user-images.githubusercontent.com/108289379/186791604-7627be07-34a5-4fe0-af98-d9d52fae956a.JPG)
+![WRRC](/src/imgs/WRRC.jpg)
 
 ## Change Log
 
