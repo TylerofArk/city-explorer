@@ -112,12 +112,12 @@ Brian Sward
 
 ### Friday, Aug. 26, 2022
 
-### Name of feature: 
+### Name of feature: Cache
 
-### Estimate of time needed to complete: 
+### Estimate of time needed to complete: 2 hrs
 
-### Start time: 
+### Start time: 11:26am
 
-### Finish time:
+### Finish time: 1:40pm
 
-### Actual time needed to complete:
+### Actual time needed to complete: 2hr 15 min
