@@ -12,7 +12,13 @@ This is a React application that uses the Axios library to make user-initiated r
 
 ## Architecture
 
-![WRRC](/src/imgs/WRRC.jpg)
+![WRRC](/imgs/WRRC.png)
+
+![WRRC](/imgs/WRRC1.jpg)
+
+![WRRC](/imgs/WRRC2.png)
+
+![WRRC](/imgs/WRRC3.jpg)
 
 ## Change Log
 
